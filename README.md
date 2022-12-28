@@ -33,3 +33,17 @@ Learn basics of angular js with the helps of netninja tutorials
 - The controller means the functionality of our views.
 - Controller performs the interactions between our models and our views.
 - Different controller for different areas in our applications.
+
+
+### Directives in angular js
+- Directives are classes that add additional behavior to elements in your angular applications.
+- Mainly there are 3 types of build in directives in angular,
+
+    1. Components directives
+        - It is used with a template. This type of directive is the most common directive type.
+
+    2. Attribute directives
+        - Attribute directive helps to change the appearance or behavior of an element, component, or another directive.
+
+    3. Structural directives
+        - Structural directives helps to change the DOM layout by adding and removing DOM elements. 
