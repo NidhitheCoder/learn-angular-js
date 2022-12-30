@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./content/css/styles.css" type="text/css" />
     <script src="./app/lib/angular.min.js"></script>
   </head>
-  <body ng-init="numbers=[1,2,3,4]; meats=['pork', 'ham', 'beef']; color='orange'">
+  <body ng-init="numbers=[1,2,3,4]; meats=['pork', 'ham', 'beef']; color='orange'; ninjas=['yoshi', 'crystal', 'ryu', 'dude']">
     <p>Hello</p>
     <input type="text" ng-model="favMeat" placeholder="Enter you fav meat" />
     <p>Your fav meat is: {{favMeat}}</p>
@@ -16,5 +16,16 @@
     <p>{{numbers[0] + numbers[3] }}</p>
     <p>You like {{meats[0]}}</p>
     <p class="{{color}}">This is the {{color}} color text</p>
+    <!-- ng-repeat directives -->
+    <!-- <ul>
+      <li>{{ninjas[0]}}</li>
+      <li>{{ninjas[1]}}</li>
+      <li>{{ninjas[2]}}</li>
+      <li>{{ninjas[3]}}</li>
+    </ul> -->
+
+    <ul>
+      <li ng-repeat="ninja in ninjas">{{ninja}}</li>
+    </ul>
   </body>
 </html>
