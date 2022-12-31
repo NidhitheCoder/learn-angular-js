@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myNinjaApp">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Angular JS controller examples</title>
+    <link rel="stylesheet" href="./content/css/styles.css" type="text/css" />
+    <script src="./app/lib/angular.min.js"></script>
+    <script src="./app/app.js"></script>
+  </head>
+  <body>
+    <div ng-controller="NinjaController">
+      <p>{{message}}</p>
+      <ul>
+        <li ng-repeat="ninja in ninjas">{{ninja}}</li>
+      </ul>
+    </div>
+    <!-- <p>{{message}}</p> // not working it is out side of the scope of NinjaController -->
+  </body>
+</html>
