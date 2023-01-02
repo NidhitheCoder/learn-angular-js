@@ -47,3 +47,8 @@ Learn basics of angular js with the helps of netninja tutorials
 
     3. Structural directives
         - Structural directives helps to change the DOM layout by adding and removing DOM elements. 
+
+
+### Filters in angular js
+- Filters Essentially just change the display of how we output data to the user.
+That could be the order of the data, prefix the data or output data into a particular format.

@@ -13,7 +13,8 @@
     <div ng-controller="NinjaController">
       <p>{{message}}</p>
       <ul>
-        <li ng-repeat="ninja in ninjas">{{ninja}}</li>
+        <!-- <li ng-repeat="ninja in ninjas">{{ninja}}</li> -->
+        <li ng-repeat="ninja in ninjas | orderBy:'name'">{{ninja.name}}</li>
       </ul>
     </div>
     <!-- <p>{{message}}</p> // not working it is out side of the scope of NinjaController -->
