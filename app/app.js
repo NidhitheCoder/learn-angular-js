@@ -21,11 +21,12 @@ myNinjaApp.controller("NinjaController", [
       {
         name: "Tom",
         belt: "green",
+        rate: 50,
       },
-      { name: "Jenny", belt: "black" },
-      { name: "jerry", belt: "black" },
-      { name: "David", belt: "green" },
-      { name: "smith", belt: "black" },
+      { name: "Jenny", belt: "black", rate: 50 },
+      { name: "jerry", belt: "black", rate: 50 },
+      { name: "David", belt: "green", rate: 50 },
+      { name: "smith", belt: "black", rate: 50 },
     ];
   },
 ]);

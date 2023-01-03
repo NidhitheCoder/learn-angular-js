@@ -11,10 +11,14 @@
   </head>
   <body>
     <div ng-controller="NinjaController">
+      <input type="text" ng-model="search" />
       <p>{{message}}</p>
       <ul>
         <!-- <li ng-repeat="ninja in ninjas">{{ninja}}</li> -->
-        <li ng-repeat="ninja in ninjas | orderBy:'name'">{{ninja.name}}</li>
+        <!-- <li ng-repeat="ninja in ninjas | orderBy:'name'">{{ninja.name}}</li> -->
+        <li ng-repeat="ninja in ninjas | orderBy:'-name' | filter: search">
+          {{ninja.name}} - {{ninja.rate | currency: '$'}}
+        </li>
       </ul>
     </div>
     <!-- <p>{{message}}</p> // not working it is out side of the scope of NinjaController -->
