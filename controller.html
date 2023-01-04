@@ -11,6 +11,8 @@
   </head>
   <body>
     <div ng-controller="NinjaController">
+      <ng-include src="'./header.html'"></ng-include>
+      <header ng-include="'./header.html'"></header>
       <input type="text" ng-model="search" />
       <p>{{message}}</p>
       <ul>
