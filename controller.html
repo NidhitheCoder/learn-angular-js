@@ -14,14 +14,19 @@
     <header ng-include="'./header.html'"></header>
     <div class="content">
       <div ng-controller="NinjaController">
+        <button ng-click="order = 'name'">Order by Name</button>
+        <button ng-click="order = 'belt'">Order by Belt</button>
         <input type="text" ng-model="search" />
         <p>{{message}}</p>
         <ul>
           <!-- <li ng-repeat="ninja in ninjas">{{ninja}}</li> -->
           <!-- <li ng-repeat="ninja in ninjas | orderBy:'name'">{{ninja.name}}</li> -->
+           <!-- ng-repeat="ninja in ninjas | orderBy:'-name' | filter: search" -->
+          <!-- ng-show="ninja.available" -->
           <li
-            ng-repeat="ninja in ninjas | orderBy:'-name' | filter: search"
-            ng-show="!ninja.available"
+           
+            ng-repeat="ninja in ninjas | orderBy: order | filter: search"
+            ng-hide="!ninja.available"
           >
             {{ninja.name}} - {{ninja.rate | currency: '$'}}
           </li>
