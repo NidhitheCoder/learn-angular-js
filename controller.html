@@ -21,14 +21,17 @@
         <ul>
           <!-- <li ng-repeat="ninja in ninjas">{{ninja}}</li> -->
           <!-- <li ng-repeat="ninja in ninjas | orderBy:'name'">{{ninja.name}}</li> -->
-           <!-- ng-repeat="ninja in ninjas | orderBy:'-name' | filter: search" -->
+          <!-- ng-repeat="ninja in ninjas | orderBy:'-name' | filter: search" -->
           <!-- ng-show="ninja.available" -->
           <li
-           
             ng-repeat="ninja in ninjas | orderBy: order | filter: search"
             ng-hide="!ninja.available"
           >
-            {{ninja.name}} - {{ninja.rate | currency: '$'}}
+            <h3>{{ninja.name}} - {{ninja.rate | currency: '$'}}</h3>
+            <div class="remove" ng-click="removeNinja()">X</div>
+            <span class="belt" style="background: {{ninja.belt}}"
+              >{{ninja.belt}} Belt</span
+            >
           </li>
         </ul>
       </div>
