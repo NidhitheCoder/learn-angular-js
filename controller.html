@@ -28,7 +28,7 @@
             ng-hide="!ninja.available"
           >
             <h3>{{ninja.name}} - {{ninja.rate | currency: '$'}}</h3>
-            <div class="remove" ng-click="removeNinja()">X</div>
+            <div class="remove" ng-click="removeNinja(ninja)">X</div>
             <span class="belt" style="background: {{ninja.belt}}"
               >{{ninja.belt}} Belt</span
             >

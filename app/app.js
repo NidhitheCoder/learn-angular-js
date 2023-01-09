@@ -17,6 +17,12 @@ myNinjaApp.controller("NinjaController", [
   "$scope",
   ($scope) => {
     $scope.message = "message from controller";
+
+    $scope.removeNinja = (ninja) => {
+      let removedNinja = $scope.ninjas.indexOf(ninja);
+      $scope.ninjas.splice(removedNinja, 1);
+    };
+
     $scope.ninjas = [
       {
         name: "Tom",
