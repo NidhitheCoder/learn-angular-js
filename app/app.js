@@ -42,11 +42,12 @@ myNinjaApp.controller("NinjaController", [
         belt: "black",
         rate: 50,
         available: true,
+        path: 'sample.png'
       },
-      { name: "Jenny", belt: "black", rate: 50, available: false },
-      { name: "jerry", belt: "green ", rate: 50, available: true },
-      { name: "David", belt: "green", rate: 50, available: false },
-      { name: "smith", belt: "black", rate: 50, available: true },
+      { name: "Jenny", belt: "black", rate: 50, available: false, path: 'sample.png' },
+      { name: "jerry", belt: "green ", rate: 50, available: true, path: 'sample.png' },
+      { name: "David", belt: "green", rate: 50, available: false, path: 'sample.png' },
+      { name: "smith", belt: "black", rate: 50, available: true, path: 'sample.png' },
     ];
   },
 ]);
