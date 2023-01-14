@@ -1,4 +1,4 @@
-const myNinjaApp = angular.module("myNinjaApp", []);
+const myNinjaApp = angular.module("myNinjaApp", ['ngRoute']);
 
 // Before application run
 myNinjaApp.config(() => {});
