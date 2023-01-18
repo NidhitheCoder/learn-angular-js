@@ -52,42 +52,8 @@ myNinjaApp.controller("NinjaController", [
       $scope.newninja.rate = "";
     };
 
-    $scope.ninjas = [
-      {
-        name: "Tom",
-        belt: "black",
-        rate: 50,
-        available: true,
-        path: "../assets/ninja1.jpg",
-      },
-      {
-        name: "Jenny",
-        belt: "black",
-        rate: 50,
-        available: false,
-        path: "../assets/ninja1.jpg",
-      },
-      {
-        name: "jerry",
-        belt: "green ",
-        rate: 50,
-        available: true,
-        path: "../assets/ninja1.jpg",
-      },
-      {
-        name: "David",
-        belt: "green",
-        rate: 50,
-        available: false,
-        path: "../assets/ninja1.jpg",
-      },
-      {
-        name: "smith",
-        belt: "black",
-        rate: 50,
-        available: true,
-        path: "../assets/ninja1.jpg",
-      },
-    ];
+  
+
+    // console.log(angular.toJson($scope.ninjas))
   },
 ]);
