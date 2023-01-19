@@ -31,7 +31,8 @@ myNinjaApp.controller("NinjaController", ($scope) => {
 // For protect from minification
 myNinjaApp.controller("NinjaController", [
   "$scope",
-  ($scope) => {
+  '$http',
+  ($scope, $http) => {
     $scope.message = "message from controller";
 
     $scope.removeNinja = (ninja) => {
@@ -52,7 +53,9 @@ myNinjaApp.controller("NinjaController", [
       $scope.newninja.rate = "";
     };
 
-  
+  $http.get('data/ninjas.json').success(function(data) {
+    $scope.ninjas = data;
+  })
 
     // console.log(angular.toJson($scope.ninjas))
   },
