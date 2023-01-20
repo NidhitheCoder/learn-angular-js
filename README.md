@@ -69,9 +69,22 @@ Learn basics of angular js with the helps of netninja tutorials
 - ng-include helps to break big html codes into logical pieces.
 - ng-include helps to avoid repeating codes.
 
-
-
 ### Custom directives
+
 - Custom directives are used in angularJS to extend the functionality of HTML. Custom directives are defined using "directive" function.
 - A custom directive simply replaces the element for which it is activated.
 - AngularJS Application during bootstrap finds the matching elements and do one time activity using its compile() method of the custom directive then process the element using ling() method of the custom directive based on the scope of the directive
+- Angular js provide support to create custom directives fot following the type of elements.
+
+1. `Element directives` - Directive activates when a matching element is encountered.
+2. `Attribute` - Directive activates when a matching attribute is encountered.
+3. `CSS` - Directive activates when a matching css style is encountered.
+4. `Comment` - Directive activates when a matching comment is encountered.
+
+### Understanding custom directives
+
+- Define custom html tags
+  ```
+  <student name="Peter"></student>
+  <student name="Sara"></student>
+  ```
