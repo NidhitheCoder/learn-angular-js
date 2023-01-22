@@ -5,6 +5,7 @@ myNinjaApp.config([
     $routeProvider
       .when("./home", {
         templateUrl: "views/home.html",
+        controller: 'NinjaController'
       })
       .when("directory", {
         templateUrl: "views/directory.html",
@@ -21,6 +22,10 @@ myNinjaApp.config(() => {});
 
 // Fire when the application run
 myNinjaApp.run(() => {});
+
+myNinjaApp.directive('randomNinja', [function() {
+  return {};
+}])
 
 // function inside controller contain code for 'NinjaController' section of the web application
 myNinjaApp.controller("NinjaController", ($scope) => {
