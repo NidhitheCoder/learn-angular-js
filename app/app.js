@@ -1,15 +1,18 @@
 const myNinjaApp = angular.module("myNinjaApp", ["ngRoute"]);
+
+myNinjaApp.use(express.static(path.join(__dirname, "js")));
+
 myNinjaApp.config([
   "$routeProvider",
   function ($routeProvider) {
     $routeProvider
-      .when("./home", {
+      .when("/home", {
         templateUrl: "views/home.html",
-        controller: 'NinjaController'
+        controller: "NinjaController",
       })
-      .when("directory", {
+      .when("/directory", {
         templateUrl: "views/directory.html",
-        controller: "ninjaController",
+        controller: "NinjaController",
       })
       .otherwise({
         redirectTo: "/home",
@@ -23,9 +26,13 @@ myNinjaApp.config(() => {});
 // Fire when the application run
 myNinjaApp.run(() => {});
 
-myNinjaApp.directive('randomNinja', [function() {
-  return {};
-}])
+myNinjaApp.directive("randomNinja", [
+  function () {
+    return {
+      restrict: "EA",
+    };
+  },
+]);
 
 // function inside controller contain code for 'NinjaController' section of the web application
 myNinjaApp.controller("NinjaController", ($scope) => {
@@ -36,7 +43,7 @@ myNinjaApp.controller("NinjaController", ($scope) => {
 // For protect from minification
 myNinjaApp.controller("NinjaController", [
   "$scope",
-  '$http',
+  "$http",
   ($scope, $http) => {
     $scope.message = "message from controller";
 
@@ -58,9 +65,9 @@ myNinjaApp.controller("NinjaController", [
       $scope.newninja.rate = "";
     };
 
-  $http.get('data/ninjas.json').success(function(data) {
-    $scope.ninjas = data;
-  })
+    $http.get("data/ninjas.json").success(function (data) {
+      $scope.ninjas = data;
+    });
 
     // console.log(angular.toJson($scope.ninjas))
   },
