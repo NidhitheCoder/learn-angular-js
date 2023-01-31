@@ -1,7 +1,5 @@
 const myNinjaApp = angular.module("myNinjaApp", ["ngRoute"]);
 
-myNinjaApp.use(express.static(path.join(__dirname, "js")));
-
 myNinjaApp.config([
   "$routeProvider",
   function ($routeProvider) {
@@ -43,7 +41,7 @@ myNinjaApp.controller("NinjaController", ($scope) => {
 // For protect from minification
 myNinjaApp.controller("NinjaController", [
   "$scope",
-  "$http",
+  "$http", 
   ($scope, $http) => {
     $scope.message = "message from controller";
 
@@ -65,7 +63,7 @@ myNinjaApp.controller("NinjaController", [
       $scope.newninja.rate = "";
     };
 
-    $http.get("data/ninjas.json").success(function (data) {
+    $http.get("data/ninjas.json").then(function ({data}) {
       $scope.ninjas = data;
     });
 
